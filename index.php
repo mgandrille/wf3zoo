@@ -50,7 +50,3 @@ $animals = $response->fetchAll(PDO::FETCH_ASSOC);
     </main>
 
     <?php include 'partials/footer.php' ?>
-
-</body>
-
-</html>

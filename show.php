@@ -26,7 +26,7 @@ if($animal['sexe'] === '1') {
 <main role="main">
 
     <div class="card">
-        <img src="assets/img/<?= $animal['image'] ?>" class="card-img-top" height="450" alt="...">
+        <img src="assets/img/<?= $animal['image'] ?>" class="card-img-top" height="550" alt="...">
         <div class="card-body">
             <h3 class="card-title"><?= $animal['nom'] ?></h3>
             <p class="card-text">Some quick description.</p>
@@ -57,7 +57,3 @@ if($animal['sexe'] === '1') {
 </main>
 
 <?php include 'partials/footer.php' ?>
-
-</body>
-
-</html>
