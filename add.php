@@ -8,15 +8,15 @@
     <div class="container-fluid">
         <form method="post" action="create.php">
             <div class="form-group row">
-                <label for="name" class="col-sm-2 col-form-label">Nom</label>
+                <label for="nom" class="col-sm-2 col-form-label">Nom</label>
                 <div class="col-sm-10">
-                    <input type="text" name="name" class="form-control" id="name">
+                    <input type="text" name="nom" class="form-control" id="nom">
                 </div>
             </div>
             <div class="form-group row">
-                <label for="description" class="col-sm-2 col-form-label">Description</label>
+                <label for="description_courte" class="col-sm-2 col-form-label">Description</label>
                 <div class="col-sm-10">
-                <textarea name="description" class="form-control" id="description" rows="3"></textarea>
+                <textarea name="description_courte" class="form-control" id="description_courte" rows="3"></textarea>
                 </div>
             </div>
             <div class="form-group row">
