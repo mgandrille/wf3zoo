@@ -26,15 +26,10 @@ if($animal['sexe'] === '1') {
 <main role="main">
 
     <div class="card">
-        <!-- <img src="..." class="card-img-top" alt="..."> -->
-        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-        </svg>
-
+        <img src="<?= $animal['image'] ?>" class="card-img-top" height="450" alt="...">
         <div class="card-body">
-            <h5 class="card-title"><?= $animal['nom'] ?></h5>
-            <!-- <p class="card-text">Some quick description.</p> -->
+            <h3 class="card-title"><?= $animal['nom'] ?></h3>
+            <p class="card-text">Some quick description.</p>
         </div> 
         <ul class="list-group list-group-flush">
             <li class="list-group-item"><Strong>Espèce</Strong> 

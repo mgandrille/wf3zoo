@@ -23,13 +23,14 @@ $animals = $response->fetchAll(PDO::FETCH_ASSOC);
                 <?php foreach ($animals as $animal) : ?>
                     <div class="col-md-4">
                         <div class="card mb-4 shadow-sm">
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                            <img src="<?= $animal['image'] ?>" class="card-img-top" height="225" alt="...">
+                            <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
                                 <title>Placeholder</title>
                                 <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                            </svg>
+                            </svg> -->
                             <div class="card-body">
                                 <h5 class="card-title"><?= $animal['nom'] ?></h5>
-                                <p class="card-text">Vous souhaitez en savoir plus ? Cliquez sur le bouton !</p>
+                                <p class="card-text">Some quick description</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <button type="button" class="btn btn-sm btn-outline-secondary"><a href="show.php?id=<?= $animal['id'] ?>"> View </a></button>
