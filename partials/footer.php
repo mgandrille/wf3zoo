@@ -1,10 +1,10 @@
 <footer class="text-muted">
         <div class="container">
             <p class="float-right">
-                <a href="#">Back to top</a>
+                <a href="#top">Back to top</a>
             </p>
-            <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-            <p>New to Bootstrap? <a href="https://getbootstrap.com/">Visit the homepage</a> or read our <a href="/docs/4.4/getting-started/introduction/">getting started guide</a>.</p>
+            <p>Album du WF3 Zoo - &copy; WF3 équipe 2020</p>
+            <p>Nouveau au Zoo ? <a href="https://wf3.fr/">Visitez WF3</a>... </p>
         </div>
     </footer>
 
