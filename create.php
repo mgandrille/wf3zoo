@@ -1,20 +1,12 @@
-<?php include 'partials/header.php'; ?>
-<?php include 'partials/navbar.php'; ?>
+<?php
 
-<main role="main">
+$bdd = new PDO('mysql:host=localhost;dbname=wf3zoo;charset=utf8;port=3306', 'root', 'root');
+$request = "INSERT INTO animals (espece, nom, taille, poids, date_de_naissance, pays_origine, sexe) 
+            VALUES ('". $_POST["espece"] ."', '". $_POST["name"] . "', '" . $_POST["taille"] .
+                    "', '" . $_POST["poids"] . "', '" . $_POST["date_de_naissance"] . "', '" . $_POST["pays_origine"] .
+                    "', '" . $_POST["sexe"] . "')";
+$bdd->query($request);
 
-    <h1>Données récupérées :</h1>
-    <div class="container">
-        <p>espece : <?= $_POST["espece"] ?></p>
-        <p>nom : <?= $_POST["name"] ?></p>
-        <p>taille : <?= $_POST["taille"] ?></p>
-        <p>poids : <?= $_POST["poids"] ?></p>
-        <p>date_de_naissance : <?= $_POST["date_de_naissance"] ?></p>
-        <p>pays_origine : <?= $_POST["pays_origine"] ?></p>
-        <p>sexe : <?= $_POST["sexe"] ?></p>
-    </div>
+header('Location: index.php');
 
-</main>
-
-<?php include 'partials/footer.php' ?>
-
+?>
