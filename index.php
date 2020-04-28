@@ -30,7 +30,7 @@ $animals = $response->fetchAll(PDO::FETCH_ASSOC);
                             </svg> -->
                             <div class="card-body">
                                 <h5 class="card-title"><?= $animal['nom'] ?></h5>
-                                <p class="card-text">Some quick description</p>
+                                <p class="card-text"><?= $animal['description'] ?></p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <button type="button" class="btn btn-sm btn-outline-secondary"><a href="show.php?id=<?= $animal['id'] ?>"> View </a></button>

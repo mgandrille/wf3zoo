@@ -29,7 +29,7 @@ if($animal['sexe'] === '1') {
         <img src="assets/img/<?= $animal['image'] ?>" class="card-img-top" height="550" alt="...">
         <div class="card-body">
             <h3 class="card-title"><?= $animal['nom'] ?></h3>
-            <p class="card-text">Some quick description.</p>
+            <p class="card-text"><?= $animal['description'] ?></p>
         </div> 
         <ul class="list-group list-group-flush">
             <li class="list-group-item"><Strong>Espèce</Strong> 
@@ -48,10 +48,9 @@ if($animal['sexe'] === '1') {
                 </ul>
             </li>
         </ul>
-        <!-- <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-        </div> -->
+        <div class="card-footer text-center">
+            <a href="index.php" class="card-link">Accueil</a>
+        </div>
     </div>
 
 </main>

@@ -14,6 +14,12 @@
                 </div>
             </div>
             <div class="form-group row">
+                <label for="description" class="col-sm-2 col-form-label">Description</label>
+                <div class="col-sm-10">
+                <textarea name="description" class="form-control" id="description" rows="3"></textarea>
+                </div>
+            </div>
+            <div class="form-group row">
                 <label for="espece" class="col-sm-2 col-form-label">Espèce</label>
                 <div class="col-sm-10">
                     <input type="text" name="espece" class="form-control" id="espece">
