@@ -7,11 +7,10 @@
                         <p class="text-muted">Bienvenue au Zoo de Web Force 3 édition 2020 !</p>
                     </div>
                     <div class="col-sm-4 offset-md-1 py-4">
-                        <h4 class="text-white">Contact</h4>
+                        <h4 class="text-white">Gestion du zoo</h4>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="text-white">Follow on Twitter</a></li>
-                            <li><a href="#" class="text-white">Like on Facebook</a></li>
-                            <li><a href="#" class="text-white">Email me</a></li>
+                            <li><a href="add.php" class="text-white">Ajouter un animal</a></li>
+                            <li><a href="#" class="text-white">Supprimer un animal</a></li>
                         </ul>
                     </div>
                 </div>
