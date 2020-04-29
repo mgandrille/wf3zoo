@@ -10,9 +10,10 @@ $response->execute([
     'email'    => $_POST['email'],
     'password'    => $_POST['password']
 ]);
+$user = $response->fetch(PDO::FETCH_ASSOC);
 
-
-die;
+// var_dump($user);
+// die;
 
 ?>
 
@@ -21,10 +22,9 @@ die;
 
 <main role="main">
 
-    <?php if ($users) : ?>
-        
+    <?php if ($user) : ?>
     <div class="alert alert-success" role="alert">
-        Votre compte a bien été créé !
+        Vous êtes bien connecté !
     </div>
 
     <?php else : ?>
