@@ -12,6 +12,7 @@ $response->execute([
 ]);
 $user = $response->fetch(PDO::FETCH_ASSOC);
 
+$_SESSION['user'] = $user;
 // var_dump($user);
 // die;
 

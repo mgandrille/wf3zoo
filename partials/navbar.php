@@ -10,6 +10,9 @@
                     </div>
                     <div class="col-sm-4 offset-md-1 py-4">
                         <h4 class="text-white">Gestion du zoo</h4>
+                        <?php if($_SESSION['user']) : ?>
+                        <p>Bienvenue <?= $user['email'] ?> !</p>
+                        <?php endif; ?>
                         <ul class="list-unstyled">
                             <li><a href="signUp.php" class="text-white">Se connecter</a></li>
                             <li><a href="add.php" class="text-white">Ajouter un animal</a></li>
