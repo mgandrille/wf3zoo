@@ -42,10 +42,11 @@ $animals = $response->fetchAll(PDO::FETCH_ASSOC);
                                 <p class="card-text"><?= $animal['description_courte'] ?></p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary"><a href="show.php?id=<?= $animal['id'] ?>"> View </a></button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary"><a href="show.php?id=<?= $animal['id'] ?>">Voir</a></button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary"><a href="edit.php?id=<?= $animal['id'] ?>">Modifier</a></button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary"><a href="confirmDelete.php?id=<?= $animal['id'] ?>">Supprimer</a></button>
                                     </div>
-                                    <small class="text-muted"><?= date("H:m")?></small>
+                                    <!-- <small class="text-muted"><?= date("H:m")?></small> -->
                                 </div>
                             </div>
                         </div>
