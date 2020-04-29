@@ -26,3 +26,17 @@ var_dump($_POST);
 // header('Location: index.php');
 
 ?>
+
+<?php include 'partials/header.php'; ?>
+<?php include 'partials/navbar.php'; ?>
+
+<main role="main">
+    <h1>Mise à Jour</h1>
+
+    <div class="alert alert-warning" role="alert">
+        L'animal <strong><?= $_POST['nom'] ?></strong> a bien été mis à jour !
+    </div>
+
+</main>
+
+<?php include 'partials/footer.php' ?>
