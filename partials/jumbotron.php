@@ -1,3 +1,5 @@
+<?php require_once 'config/config.php' ?>
+
 <section class="jumbotron text-center">
             <div class="container">
                 <h1>Web Force 3 - Zoo</h1>

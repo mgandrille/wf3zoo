@@ -1,3 +1,5 @@
+<?php require_once 'config/config.php' ?>
+
 <footer class="text-muted">
         <div class="container">
             <p class="float-right">

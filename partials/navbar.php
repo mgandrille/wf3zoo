@@ -1,3 +1,5 @@
+<?php require_once 'config/config.php' ?>
+
 <header id="top">
         <div class="collapse bg-info" id="navbarHeader">
             <div class="container">
@@ -9,6 +11,7 @@
                     <div class="col-sm-4 offset-md-1 py-4">
                         <h4 class="text-white">Gestion du zoo</h4>
                         <ul class="list-unstyled">
+                            <li><a href="signUp.php" class="text-white">Se connecter</a></li>
                             <li><a href="add.php" class="text-white">Ajouter un animal</a></li>
                             <li><a href="#" class="text-white">Supprimer un animal</a></li>
                         </ul>

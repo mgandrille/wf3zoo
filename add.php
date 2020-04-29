@@ -1,3 +1,5 @@
+<?php require_once 'config/config.php' ?>
+
 <?php include 'partials/header.php'; ?>
 <?php include 'partials/navbar.php'; ?>
 

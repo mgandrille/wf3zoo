@@ -1,6 +1,8 @@
+<?php require_once 'config/config.php' ?>
+
 <?php
 
-include 'config/bdd.php';
+require 'config/bdd.php';
 
 // $request = "INSERT INTO animals (espece, nom, taille, poids, date_de_naissance, pays_origine, sexe, description_courte) 
 //             VALUES ('". $_POST["espece"] ."', '". $_POST["name"] . "', '" . $_POST["taille"] .
@@ -25,6 +27,9 @@ $response->execute([
     'description_courte'=> $_POST['description_courte']
 ]);
 
-header('Location: index.php');
+var_dump($response->$debugDumpParams());
+
+
+// header('Location: index.php');
 
 ?>
