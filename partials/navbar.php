@@ -1,5 +1,27 @@
 <?php require_once 'config/config.php' ?>
 
+<?php
+
+if(isset($_SESSION['user'])) {
+    $user = $_SESSION['user'];
+}
+else {
+    include './config/bdd.php';
+    $request = "SELECT * FROM user 
+                WHERE email = :email && password = :password";
+    $response = $bdd->prepare($request);
+    $response->execute([
+        'email'    => $_POST['email'],
+        'password' => $_POST['password']
+    ]);
+    $user = $response->fetch(PDO::FETCH_ASSOC);
+    
+    $_SESSION['user'] = $user;    
+}
+
+?>
+
+
 <header id="top">
         <div class="collapse bg-info" id="navbarHeader">
             <div class="container">
@@ -12,12 +34,18 @@
                         <h4 class="text-white">Gestion du zoo</h4>
                         <?php if($_SESSION['user']) : ?>
                         <p>Bienvenue <?= $user['email'] ?> !</p>
-                        <?php endif; ?>
                         <ul class="list-unstyled">
-                            <li><a href="signUp.php" class="text-white">Se connecter</a></li>
                             <li><a href="add.php" class="text-white">Ajouter un animal</a></li>
-                            <li><a href="#" class="text-white">Supprimer un animal</a></li>
+                            <li><a href="logout.php" class="text-white">Se déconnecter</a></li>
                         </ul>
+                        <?php else : ?>
+                        <p>Vous n'êtes pas connecté.</p>
+                        <ul class="list-unstyled">
+                            <li><a href="login.php" class="text-white">Connectez vous</a></li>
+                            <li><a href="signUp.php" class="text-white">Créer un compte</a></li>
+                        </ul>
+
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>

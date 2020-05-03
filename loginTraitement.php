@@ -2,19 +2,17 @@
 
 <?php
 
-include './config/bdd.php';
-$request = "SELECT * FROM user 
-            WHERE email = :email && password = :password";
-$response = $bdd->prepare($request);
-$response->execute([
-    'email'    => $_POST['email'],
-    'password'    => $_POST['password']
-]);
-$user = $response->fetch(PDO::FETCH_ASSOC);
+// include './config/bdd.php';
+// $request = "SELECT * FROM user 
+//             WHERE email = :email && password = :password";
+// $response = $bdd->prepare($request);
+// $response->execute([
+//     'email'    => $_POST['email'],
+//     'password' => $_POST['password']
+// ]);
+// $user = $response->fetch(PDO::FETCH_ASSOC);
 
-$_SESSION['user'] = $user;
-// var_dump($user);
-// die;
+// $_SESSION['user'] = $user;
 
 ?>
 
@@ -25,7 +23,9 @@ $_SESSION['user'] = $user;
 
     <?php if ($user) : ?>
     <div class="alert alert-success" role="alert">
-        Vous êtes bien connecté !
+        <p>Bienvenue <?= $user['email'] ?> </p>
+        <p>Vous êtes bien connecté ! </p>
+        
     </div>
 
     <?php else : ?>
@@ -38,3 +38,5 @@ $_SESSION['user'] = $user;
 </main>
 
 <?php include 'partials/footer.php' ?>
+
+<?php header('Location: index.php'); ?>

@@ -2,8 +2,8 @@
 
 <?php
 
-include 'config/bdd.php';
 
+include 'config/bdd.php';
 $request = "SELECT * FROM animals";
 $response = $bdd->query($request);
 $animals = $response->fetchAll(PDO::FETCH_ASSOC);
@@ -45,8 +45,10 @@ $animals = $response->fetchAll(PDO::FETCH_ASSOC);
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <button type="button" class="btn btn-sm btn-outline-secondary"><a href="show.php?id=<?= $animal['id'] ?>">Voir</a></button>
+                                        <?php if($user) : ?>
                                         <button type="button" class="btn btn-sm btn-outline-secondary"><a href="edit.php?id=<?= $animal['id'] ?>">Modifier</a></button>
                                         <button type="button" class="btn btn-sm btn-outline-secondary"><a href="confirmDelete.php?id=<?= $animal['id'] ?>">Supprimer</a></button>
+                                        <?php endif; ?>
                                     </div>
                                     <!-- <small class="text-muted"><?= date("H:m")?></small> -->
                                 </div>

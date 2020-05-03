@@ -27,7 +27,7 @@ $response->execute([
     'description_courte'=> $_POST['description_courte']
 ]);
 
-var_dump($response->$debugDumpParams());
+// var_dump($response->$debugDumpParams());
 
 
 // header('Location: index.php');
