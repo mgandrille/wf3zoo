@@ -1,22 +1,28 @@
 <?php require_once 'config/config.php' ?>
 
 <?php
+// var_dump($_SESSION);
 
-if(isset($_SESSION['user'])) {
-    $user = $_SESSION['user'];
+if(!$_SESSION) {
+    $user = false;
 }
 else {
-    include './config/bdd.php';
-    $request = "SELECT * FROM user 
-                WHERE email = :email && password = :password";
-    $response = $bdd->prepare($request);
-    $response->execute([
-        'email'    => $_POST['email'],
-        'password' => $_POST['password']
-    ]);
-    $user = $response->fetch(PDO::FETCH_ASSOC);
-    
-    $_SESSION['user'] = $user;    
+    if(isset($_SESSION['user'])) {
+        $user = $_SESSION['user'];
+    }
+    else {
+        include './config/bdd.php';
+        $request = "SELECT * FROM user 
+                    WHERE email = :email && password = :password";
+        $response = $bdd->prepare($request);
+        $response->execute([
+            'email'    => $_POST['email'],
+            'password' => $_POST['password']
+        ]);
+        $user = $response->fetch(PDO::FETCH_ASSOC);
+        
+        $_SESSION['user'] = $user;    
+    }    
 }
 
 ?>
@@ -32,7 +38,7 @@ else {
                     </div>
                     <div class="col-sm-4 offset-md-1 py-4">
                         <h4 class="text-white">Gestion du zoo</h4>
-                        <?php if($_SESSION['user']) : ?>
+                        <?php if($user) : ?>
                         <p>Bienvenue <?= $user['email'] ?> !</p>
                         <ul class="list-unstyled">
                             <li><a href="add.php" class="text-white">Ajouter un animal</a></li>

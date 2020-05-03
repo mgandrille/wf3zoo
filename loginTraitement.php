@@ -2,17 +2,17 @@
 
 <?php
 
-// include './config/bdd.php';
-// $request = "SELECT * FROM user 
-//             WHERE email = :email && password = :password";
-// $response = $bdd->prepare($request);
-// $response->execute([
-//     'email'    => $_POST['email'],
-//     'password' => $_POST['password']
-// ]);
-// $user = $response->fetch(PDO::FETCH_ASSOC);
+include './config/bdd.php';
+$request = "SELECT * FROM user 
+            WHERE email = :email && password = :password";
+$response = $bdd->prepare($request);
+$response->execute([
+    'email'    => $_POST['email'],
+    'password' => $_POST['password']
+]);
+$user = $response->fetch(PDO::FETCH_ASSOC);
 
-// $_SESSION['user'] = $user;
+$_SESSION['user'] = $user;
 
 ?>
 
