@@ -2,6 +2,10 @@
 
 <?php
 
+if (!isset($_SESSION['user'])) {
+    header('Location: index.php');
+}
+
 require 'config/bdd.php';
 
 // $request = "INSERT INTO animals (espece, nom, taille, poids, date_de_naissance, pays_origine, sexe, description_courte) 

@@ -2,6 +2,10 @@
 
 <?php
 
+if (!isset($_SESSION['user'])) {
+    header('Location: index.php');
+}
+
 include 'config/bdd.php';
 
 $request = "SELECT * FROM animals WHERE id=".$_GET["id"];
